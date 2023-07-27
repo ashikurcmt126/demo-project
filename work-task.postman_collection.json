@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "2aec4a86-877a-4a13-8049-f3578d500b2f",
+		"name": "work-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8486328",
+		"_collection_link": "https://blue-water-607072.postman.co/workspace/china-store~5bb2be55-8e05-408a-9cbb-98da16d59645/collection/8486328-2aec4a86-877a-4a13-8049-f3578d500b2f?action=share&creator=8486328&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "localhost:8083/send-location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"location\": {\n        \"latitude\": 37.7749,\n        \"longitude\": -122.4194\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/send-location",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"send-location"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/user-create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2hpa3VyMUBnbWFpbC5jb20iLCJleHAiOjE3NzY3OTY0ODEsInJvbGVzIjoiUk9MRV9BRE1JTiJ9.FSbm6TMF5FnP_l3i9AavF5-YPu592d09rIG4HAeJdhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"baa@gmail.com\",\n    \"firstName\": \"b\",\n    \"secondName\": \"bb\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/create-user",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/getUserLocationsByDateTimeRange?userId=1&startTime=2023-07-26T11:48:31.914&endTime=2023-07-26T11:50:49.554",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2hpa3VyMUBnbWFpbC5jb20iLCJleHAiOjE3NzY3OTY0ODEsInJvbGVzIjoiUk9MRV9BRE1JTiJ9.FSbm6TMF5FnP_l3i9AavF5-YPu592d09rIG4HAeJdhU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8083/getUserLocationsByDateTimeRange?userId=1&startTime=2023-07-26T11:48:31.914&endTime=2023-07-26T11:50:49.554",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getUserLocationsByDateTimeRange"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "startTime",
+							"value": "2023-07-26T11:48:31.914"
+						},
+						{
+							"key": "endTime",
+							"value": "2023-07-26T11:50:49.554"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/getUserData/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8083/getUserData/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"getUserData",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8082/application-user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"ashikur1@gmail.com\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/createUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ashikur1@gmail.com\",\n    \"password\": \"12345\",\n    \"roles\": 0\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8083/update-user/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhc2hpa3VyMUBnbWFpbC5jb20iLCJleHAiOjE3NzY3OTY0ODEsInJvbGVzIjoiUk9MRV9BRE1JTiJ9.FSbm6TMF5FnP_l3i9AavF5-YPu592d09rIG4HAeJdhU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"a@gmail.com\",\n    \"firstName\": \"aa\",\n    \"secondName\": \"bb\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/update-user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"update-user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
